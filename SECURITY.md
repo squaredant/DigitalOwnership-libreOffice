@@ -10,6 +10,7 @@ Before publishing a release:
 3. Confirm the bundled plugin configuration points to production URLs.
 4. Confirm the public verifier calculates the same hash as the plugin.
 5. Publish a versioned OXT filename to avoid browser cache issues.
+6. Confirm the public checksums in `RELEASE-MANIFEST.json`.
 
 Report security concerns through the support form on
 https://digitalownership.squaredant.com/support.

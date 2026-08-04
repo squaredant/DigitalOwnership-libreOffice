@@ -25,3 +25,12 @@ python3 digitalownership-verify.py "/path/to/document.odt" --expected-hash "PAST
 
 This script does not upload the document. It reads the file locally and prints
 the calculated values.
+
+## Check The Downloaded Script
+
+Before running the verifier, you can compare its SHA-256 checksum with
+`RELEASE-MANIFEST.json`:
+
+```sh
+shasum -a 256 digitalownership-verify.py
+```
