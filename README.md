@@ -1,9 +1,8 @@
 # DigitalOwnership LibreOffice Plugin
 
-DigitalOwnership lets writers, innovators, scientists, and creators register a
-private fingerprint of a supported office document on Arbitrum. The document
-stays on the user's computer. The public blockchain record stores only a
-cryptographic proof.
+DigitalOwnership lets creators register a unique fingerprint of a supported
+office document on Arbitrum. The document stays on the user's computer. The
+public blockchain record stores the registration, not the document content.
 
 ## Download
 
@@ -22,8 +21,8 @@ shasum -a 256 digitalownership-1.0.5.oxt
 Expected SHA-256 values:
 
 ```text
-digitalownership-1.0.5.oxt  178ca46943e3b8d5d178501e0a5f3e8f37c550ef047488717fd394a9343bd7bb
-digitalownership.oxt       178ca46943e3b8d5d178501e0a5f3e8f37c550ef047488717fd394a9343bd7bb
+digitalownership-1.0.5.oxt  9d28aaf5c90a7f0abf4d4525e32d821aab474c9e2ff752564afd2e9af90cb629
+digitalownership.oxt       9d28aaf5c90a7f0abf4d4525e32d821aab474c9e2ff752564afd2e9af90cb629
 digitalownership-verify.py 25c546bf304343073e447fca9d7e39d140c3b5850d4882a1fd2fa6c0601d1e86
 ```
 
@@ -56,7 +55,9 @@ plugin.
 
 Verification is free of charge. Open a registered document in LibreOffice and
 click Verify Document. The plugin recalculates the document fingerprint locally
-and checks whether that fingerprint is registered on-chain.
+and checks whether it is registered on-chain. For an email-linked registration,
+enter the same email address used when registering. For a wallet registration,
+leave the email field empty.
 
 Expert users can verify without LibreOffice by using the standalone verifier:
 

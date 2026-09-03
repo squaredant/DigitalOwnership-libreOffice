@@ -5,24 +5,36 @@ for the document itself.
 
 When a user clicks Register Document, the LibreOffice plugin calculates a
 SHA-512 fingerprint locally. The document content is not uploaded to
-DigitalOwnership. The web app receives only the fingerprint and registers a
-contract key derived from it on Arbitrum.
+DigitalOwnership. The plugin creates a local archive copy, checks its
+fingerprint, and sends only the fingerprint to the DigitalOwnership service.
 
-The blockchain record shows the registered fingerprint key, the wallet address,
-and the registration time. The plugin creates a read-only archive copy for the
-user's own records. The archive is copied from the saved file and checked before
-registration opens.
+## Register With An Email Address
 
-## Wallet Control
+This is the normal workflow. Enter the email address of your DigitalOwnership
+account before registering. DigitalOwnership uses its account-registration
+wallet to submit the on-chain registration and links the registration to your
+email account. You do not need a crypto wallet or cryptocurrency.
 
-The registration is associated with the wallet address used for the transaction
-or signature. This does not prove legal authorship by itself, but it creates a
-dated record that the user controlled that wallet address when registering the
-document fingerprint.
+If the plugin needs you to sign in or link this LibreOffice installation to your
+account, it opens the account page. Complete that step in the same browser and
+return to LibreOffice. After the registration is complete, verify the archive
+with the same email address.
 
-## Credits And Direct Wallet Registration
+## Register With A Crypto Wallet
 
-The normal hosted workflow uses registration credits purchased through the
-DigitalOwnership website. Expert users can instead register directly with their
-own crypto wallet and pay Arbitrum gas themselves. Direct wallet registrations
-are outside the credit, support, and refund workflow.
+If you leave the email address empty, the plugin opens the Web3 registration
+page. It attempts to register under your connected crypto wallet. You approve
+the transaction in that wallet and pay the network gas directly. If that was not
+intended, return to LibreOffice and enter your email address instead.
+
+A wallet registration creates evidence that the connected wallet controlled the
+registration at that time. You are responsible for access to that wallet.
+
+## Verify And Share
+
+The blockchain record contains the registry key, registrant, and registration
+time. The archive copy remains on your computer and is the file that should be
+shared for verification. Anyone can verify its fingerprint through
+DigitalOwnership, but an email-linked registration requires the registration
+email address. Verify an archive before opening, editing, resaving, or
+converting it.

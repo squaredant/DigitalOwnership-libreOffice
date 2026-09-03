@@ -44,8 +44,13 @@ file_digest encoded as ASCII lowercase hex
 The final document hash is the lowercase hexadecimal SHA-512 digest of that
 canonical manifest.
 
-The contract registry key is derived separately as:
+For a wallet registration, the contract registry key is derived as:
 
 ```text
 keccak256(SHA-512 hash text)
 ```
+
+For an email-linked registration, the service first derives a normalized
+email-claim hash, then derives a distinct registry key from the document hash
+and that email claim. This is why verification needs the registration email for
+that workflow.
