@@ -7,7 +7,7 @@ cryptographic proof.
 
 ## Download
 
-- LibreOffice extension: [digitalownership-1.0.1.oxt](downloads/digitalownership-1.0.1.oxt)
+- LibreOffice extension: [digitalownership-1.0.5.oxt](downloads/digitalownership-1.0.5.oxt)
 - Compatibility alias: [digitalownership.oxt](downloads/digitalownership.oxt)
 - Manual verifier: [digitalownership-verify.py](downloads/digitalownership-verify.py)
 
@@ -16,15 +16,15 @@ cryptographic proof.
 Use SHA-256 to confirm that a downloaded file matches this release:
 
 ```sh
-shasum -a 256 digitalownership-1.0.1.oxt
+shasum -a 256 digitalownership-1.0.5.oxt
 ```
 
 Expected SHA-256 values:
 
 ```text
-digitalownership-1.0.1.oxt  8a44ffd1a4b35bf19a67dd2a17d6658eab386d6b1ae9f8c389c6a2273fe9012a
-digitalownership.oxt       8a44ffd1a4b35bf19a67dd2a17d6658eab386d6b1ae9f8c389c6a2273fe9012a
-digitalownership-verify.py 9ed4b0f054b4a0aad8783809b26f962a7c81563a8d192c6513fbd1767b1e3468
+digitalownership-1.0.5.oxt  178ca46943e3b8d5d178501e0a5f3e8f37c550ef047488717fd394a9343bd7bb
+digitalownership.oxt       178ca46943e3b8d5d178501e0a5f3e8f37c550ef047488717fd394a9343bd7bb
+digitalownership-verify.py 25c546bf304343073e447fca9d7e39d140c3b5850d4882a1fd2fa6c0601d1e86
 ```
 
 The same values are published in [RELEASE-MANIFEST.json](RELEASE-MANIFEST.json).

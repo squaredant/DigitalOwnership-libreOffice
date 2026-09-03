@@ -41,15 +41,19 @@ This extension license governs installation and local use of the LibreOffice
 extension. The published service terms govern website accounts, payments,
 registration credits, support, and other hosted service features.
 
-4. Document Content And Metadata
+4. Document Content And Local Records
 
 The extension is designed to calculate a document fingerprint locally. Users
 should not share unpublished or non-public manuscripts with SquaredAnt GmbH or
 any other party unless they deliberately choose to do so outside the extension.
 
-The extension may write DigitalOwnership registration metadata into the open
-document after a successful registration, including hash information, algorithm
-scope, transaction hash, and blockchain explorer link where available.
+The extension creates an archive copy for the user's records when registration
+starts and marks that copy read-only on the user's computer. File permissions
+may not survive email, cloud-sync, or cross-platform transfer. Registration
+details such as document fingerprint, algorithm scope, transaction hash,
+blockchain explorer link, and registration time may be stored in a hidden local
+DigitalOwnership records folder beside the archive. These local records support
+later verification but do not replace the blockchain registration.
 
 Users remain responsible for keeping their own document files, backups, archive
 copies, and access credentials.

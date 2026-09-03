@@ -9,8 +9,9 @@ DigitalOwnership. The web app receives only the fingerprint and registers a
 contract key derived from it on Arbitrum.
 
 The blockchain record shows the registered fingerprint key, the wallet address,
-and the registration time. The plugin can then store registration metadata in
-the document and create a read-only archive copy for the user's own records.
+and the registration time. The plugin creates a read-only archive copy for the
+user's own records. The archive is copied from the saved file and checked before
+registration opens.
 
 ## Wallet Control
 
