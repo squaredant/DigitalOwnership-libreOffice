@@ -21,8 +21,8 @@ shasum -a 256 digitalownership-1.0.5.oxt
 Expected SHA-256 values:
 
 ```text
-digitalownership-1.0.5.oxt  7023502e7e1c4038f0cdfe49216af5e7a0e9a8fe324718f7c956e8848aeb0635
-digitalownership.oxt       7023502e7e1c4038f0cdfe49216af5e7a0e9a8fe324718f7c956e8848aeb0635
+digitalownership-1.0.5.oxt  7f8d322a1eae466a35ddb73cb098440a5694ec1e30d1eec704efb1d7e10d085a
+digitalownership.oxt       7f8d322a1eae466a35ddb73cb098440a5694ec1e30d1eec704efb1d7e10d085a
 digitalownership-verify.py 25c546bf304343073e447fca9d7e39d140c3b5850d4882a1fd2fa6c0601d1e86
 ```
 
