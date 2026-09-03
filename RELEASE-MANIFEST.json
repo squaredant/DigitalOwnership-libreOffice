@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-09-03T12:23:53.732Z",
+  "generatedAt": "2026-09-03T12:33:31.612Z",
   "pluginVersion": "1.0.5",
   "files": {
-    "downloads/digitalownership-1.0.5.oxt": "b50b1f02a331fea5c1c3189a4b39eedbf912df07910c1dc582f99350c2707e6d",
-    "downloads/digitalownership.oxt": "b50b1f02a331fea5c1c3189a4b39eedbf912df07910c1dc582f99350c2707e6d",
+    "downloads/digitalownership-1.0.5.oxt": "7023502e7e1c4038f0cdfe49216af5e7a0e9a8fe324718f7c956e8848aeb0635",
+    "downloads/digitalownership.oxt": "7023502e7e1c4038f0cdfe49216af5e7a0e9a8fe324718f7c956e8848aeb0635",
     "downloads/digitalownership-verify.py": "25c546bf304343073e447fca9d7e39d140c3b5850d4882a1fd2fa6c0601d1e86"
   }
 }
