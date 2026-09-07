@@ -91,7 +91,6 @@ service.
 - [How it works](docs/how-it-works.md)
 - [Manual verification](docs/manual-verification.md)
 - [Hash algorithm](docs/hash-algorithm.md)
-- [Security notes](SECURITY.md)
 - [Changelog](CHANGELOG.md)
 
 Official service website: https://digitalownership.squaredant.com
