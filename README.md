@@ -65,8 +65,26 @@ Expert users can verify without LibreOffice by using the standalone verifier:
 python3 digitalownership-verify.py "/path/to/document.odt" --json
 ```
 
-The verifier prints the SHA-512 document fingerprint. When the optional Python
-Keccak dependency is available, it also prints the Ethereum registry key.
+This command calculates and prints the local SHA-512 document fingerprint; it
+does not query the blockchain. To check whether a wallet registration exists
+on-chain, run:
+
+```sh
+DO_WEB_VERIFICATION_URL='https://digitalownership.squaredant.com/api/verify/hash' \
+python3 digitalownership-verify.py "/path/to/document.odt" --chain
+```
+
+For an email-linked registration, add the same email address used at
+registration:
+
+```sh
+DO_WEB_VERIFICATION_URL='https://digitalownership.squaredant.com/api/verify/hash' \
+python3 digitalownership-verify.py "/path/to/document.odt" --chain --email "owner@example.com"
+```
+
+The document remains on the computer. The command sends only the calculated
+fingerprint and, when applicable, the supplied email address to the verification
+service.
 
 ## More Documentation
 

@@ -19,15 +19,19 @@ The output contains:
 
 ## Check A Registration Online
 
-Use `--chain` to query the configured DigitalOwnership verification service:
+Use `--chain` to query the DigitalOwnership verification service. The
+standalone download has no environment-specific configuration beside it, so set
+the endpoint for the command:
 
 ```sh
+DO_WEB_VERIFICATION_URL='https://digitalownership.squaredant.com/api/verify/hash' \
 python3 digitalownership-verify.py "/path/to/document.odt" --chain
 ```
 
 For an email-linked registration, provide the same registration email:
 
 ```sh
+DO_WEB_VERIFICATION_URL='https://digitalownership.squaredant.com/api/verify/hash' \
 python3 digitalownership-verify.py "/path/to/document.odt" --chain --email owner@example.com
 ```
 
