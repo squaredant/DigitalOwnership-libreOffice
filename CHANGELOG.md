@@ -1,8 +1,8 @@
 # Changelog
 
-## 1.0.5 - Current release
+## 1.0.6 - Current release
 
-- Published versioned LibreOffice package `digitalownership-1.0.5.oxt`.
+- Published versioned LibreOffice package `digitalownership-1.0.6.oxt`.
 - Kept `digitalownership.oxt` as a compatibility alias.
 - Supports email-linked account registration without a crypto wallet.
 - Supports direct wallet registration for users who intentionally use a crypto wallet.

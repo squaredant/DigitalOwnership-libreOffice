@@ -35,20 +35,32 @@ OOXML_FORMATS = {
         "volatile": set(),
     },
 }
+ODF_SUFFIXES = {".odt", ".ods", ".odp", ".odg", ".odf"}
+OOXML_SUFFIXES = {
+    ".docx": "docx",
+    ".xlsx": "xlsx",
+    ".pptx": "pptx",
+}
 
 
 def compute_document_hash(path):
     doc_path = Path(path)
+    suffix = doc_path.suffix.lower()
+    expected_ooxml_format = OOXML_SUFFIXES.get(suffix)
+    if suffix not in ODF_SUFFIXES and expected_ooxml_format is None:
+        raise UnsupportedDocumentFormat(
+            f"Unsupported file format for stable DigitalOwnership hashing: {doc_path.suffix or doc_path.name}"
+        )
     if not zipfile.is_zipfile(doc_path):
         raise UnsupportedDocumentFormat(
             f"Unsupported file format for stable DigitalOwnership hashing: {doc_path.suffix or doc_path.name}"
         )
     with zipfile.ZipFile(doc_path, "r") as package:
         names = set(package.namelist())
-        if _is_odf_package(names):
+        if suffix in ODF_SUFFIXES and _is_odf_package(names):
             return _compute_package_hash(package, _odf_hash_entries(package))
         ooxml_format = _ooxml_format(names)
-        if ooxml_format:
+        if ooxml_format == expected_ooxml_format:
             return _compute_package_hash(package, _ooxml_hash_entries(package, ooxml_format))
     raise UnsupportedDocumentFormat(
         f"Unsupported ZIP-based document format for stable DigitalOwnership hashing: {doc_path.suffix or doc_path.name}"

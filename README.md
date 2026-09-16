@@ -6,7 +6,7 @@ public blockchain record stores the registration, not the document content.
 
 ## Download
 
-- LibreOffice extension: [digitalownership-1.0.5.oxt](downloads/digitalownership-1.0.5.oxt)
+- LibreOffice extension: [digitalownership-1.0.6.oxt](downloads/digitalownership-1.0.6.oxt)
 - Compatibility alias: [digitalownership.oxt](downloads/digitalownership.oxt)
 - Manual verifier: [digitalownership-verify.py](downloads/digitalownership-verify.py)
 
@@ -15,15 +15,15 @@ public blockchain record stores the registration, not the document content.
 Use SHA-256 to confirm that a downloaded file matches this release:
 
 ```sh
-shasum -a 256 digitalownership-1.0.5.oxt
+shasum -a 256 digitalownership-1.0.6.oxt
 ```
 
 Expected SHA-256 values:
 
 ```text
-digitalownership-1.0.5.oxt  1ebd64538f75cb245eb7e863dbb345b694033a138128a2166d059130c937cd16
-digitalownership.oxt       1ebd64538f75cb245eb7e863dbb345b694033a138128a2166d059130c937cd16
-digitalownership-verify.py 25c546bf304343073e447fca9d7e39d140c3b5850d4882a1fd2fa6c0601d1e86
+digitalownership-1.0.6.oxt  0f2104198c04546452ec9283796fac9cbe56be826635fa46a3deb79f707aa076
+digitalownership.oxt       0f2104198c04546452ec9283796fac9cbe56be826635fa46a3deb79f707aa076
+digitalownership-verify.py 62627b33b14ac240b63f7ec7c34bd36ecc1cf96adc46a08e3c23a210320fff89
 ```
 
 The same values are published in [RELEASE-MANIFEST.json](RELEASE-MANIFEST.json).
