@@ -315,7 +315,6 @@ import sys
 import zipfile
 import xml.etree.ElementTree as ET
 from pathlib import Path
-from urllib.parse import urlencode
 from urllib.request import Request, urlopen
 
 
@@ -460,13 +459,16 @@ def verify_online(document_hash, document_path, verifier_cmd, email=""):
     if not verify_url:
         raise RuntimeError("--chain requires --verifier-cmd, DO_VERIFIER_CMD, or a configured web verification URL.")
 
-    separator = "&" if "?" in verify_url else "?"
     params = {"hash": document_hash}
     normalized_email = normalize_email_anchor(email)
     if normalized_email:
         params["email"] = normalized_email
-    url = f"{verify_url}{separator}{urlencode(params)}"
-    request = Request(url, headers={"Accept": "application/json"})
+    request = Request(
+        verify_url,
+        data=json.dumps(params).encode("utf-8"),
+        headers={"Accept": "application/json", "Content-Type": "application/json"},
+        method="POST",
+    )
     with urlopen(request, timeout=30) as response:
         payload = response.read().decode("utf-8")
     return json.loads(payload)
